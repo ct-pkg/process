@@ -1,0 +1,19 @@
+# process - the POSIX subprocess execution package.
+#
+# OO surface: `Process` owns one child execution. Configuration methods take
+# the receiver; `run()` executes synchronously and fills a read-only result
+# object; `Drop` closes pipes and frees captured buffers. The package never
+# invokes a shell, a PTY or job control.
+#
+# Platform: POSIX only (macOS / Linux). Windows is out of scope for this round.
+# The binding is a `.m.ct` + `.shim.h` pair over libc; there is no external C
+# library and therefore no `ldflags`.
+#
+# Requires the compiler line that ships static inherent methods
+# (`impl T { static T *new(); }`, Phase 34). If the concurrency cap is kept in
+# CT code with `atomic T` (Phase 41), raise this floor to 0.41.0; the cap may
+# also live in the C shim.
+name = process
+version = 0.1.0
+licence = MIT
+requires = ct >= 0.34.0

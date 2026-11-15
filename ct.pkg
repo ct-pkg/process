@@ -14,6 +14,8 @@
 # CT code with `atomic T` (Phase 41), raise this floor to 0.41.0; the cap may
 # also live in the C shim.
 name = process
+publisher = ct
+ns-root = .
 version = 0.1.0
 licence = MIT
 requires = ct >= 0.34.0

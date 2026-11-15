@@ -8,6 +8,7 @@ POSIX 子进程执行包：不经 shell 启动一个子进程，分别捕获 std
 - 平台：macOS 与 Linux（POSIX）；Windows 本轮不做
 - 状态：**需求层梳理完成，未立项**。本仓没有实现、没有 phase 卡。
 - 需求：[docs/requirements.md](docs/requirements.md)
+- 包外事项：[docs/external-items.md](docs/external-items.md)
 - 会话映射：[docs/session-map.md](docs/session-map.md)
 
 ## 定位与边界

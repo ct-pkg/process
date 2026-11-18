@@ -10,12 +10,13 @@
 # library and therefore no `ldflags`.
 #
 # Requires the compiler line that ships static inherent methods
-# (`impl T { static T *new(); }`, Phase 34). If the concurrency cap is kept in
-# CT code with `atomic T` (Phase 41), raise this floor to 0.41.0; the cap may
-# also live in the C shim.
+# (`impl T { static T *new(); }`, Phase 34) and `atomic T` (Phase 41). The floor
+# is 0.44.1, the latest CT release at the time of writing, so both capabilities
+# are already covered; the concurrency cap may stay in CT code or live in the
+# C shim.
 name = process
 publisher = ct
 ns-root = .
 version = 0.1.1
 licence = MIT
-requires = ct >= 0.34.0
+requires = ct >= 0.44.1
